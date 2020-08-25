@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: #2F4F4F;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    color: #FFFAF0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    position: absolute;
+    right: 0;
+    height: 92vh;
+    top: 8vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    background-color: #2F4F4F;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+}
+
+.nav-links li {
+    list-style: none;
+    opacity: 0;
+}
+
+.nav-links a {
+    color: #FFFAF0;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    text-shadow: 0 0 100px #666,                
+                 0 0 100px #666,                
+                 0 0 100px #666,                
+                 0 0 100px #666,                
+                 0 0 100px #666,                
+                 0 0 50px #000,                
+                 0 0 50px #000,                
+                 0 0 50px #000,               
+                 0 0 50px #000,                
+                 0 0 50px #000;
+}
+
+.burger {
+    display: block;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: #FFFAF0;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.toggle .bar-1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .bar-2 {
+    opacity: 0;
+}
+
+.toggle .bar-3 {
+    transform: rotate(45deg) translate(-4px,-5px);
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@media (min-width: 522px) {
+    .nav-links {
+        width: 45%;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        position: relative;
+        right: unset;
+        height: unset;
+        top: unset;
+        align-items: unset;
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateX(0%);
+    }
+    .nav-links li {
+        opacity: 1;
+    }
+    .burger {
+        display: none;
+    }
+}
+
+@media (min-width: 1100px) {
+    .nav-links {
+        width: 30%;
+    }
+}
