@@ -30,9 +30,10 @@ const navSlide = () => {
 /* Use fetch api to get list of projects hosted elsewhere */
 const projectsList = () => {
 
+    var address = config.api; // Use config.js to hide api
     // Get json data from url
     const proxy = 'https://cors-anywhere.herokuapp.com/'; // use proxy to fix cors on localhost
-    const url = `${proxy}https://utopianfool.github.io/link-api/projects.json`;
+    const url = `${proxy}${address}`;
 
 
     fetch(url) 
