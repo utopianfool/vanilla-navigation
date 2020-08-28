@@ -42,6 +42,7 @@ nav {
 .nav-links li {
     list-style: none;
     opacity: 0;
+    text-align: center;
 }
 
 .nav-links a {
@@ -63,6 +64,16 @@ nav {
                  0 0 50px #000,               
                  0 0 50px #000,                
                  0 0 50px #000;
+}
+
+.sub-menu {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.sub-menu li {
+    color: white;
+    opacity: 1;
 }
 
 .burger {
@@ -93,6 +104,8 @@ nav {
 .nav-active {
     transform: translateX(0%);
 }
+
+
 
 @keyframes navLinkFade {
     from {
@@ -129,6 +142,9 @@ nav {
         opacity: 1;
     }
     .burger {
+        display: none;
+    }
+    .sub-menu {
         display: none;
     }
 }
