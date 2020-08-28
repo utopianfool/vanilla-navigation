@@ -1,6 +1,7 @@
 # Navigation with Vanilla Javascript
 
-Navigation slide in from right on tablet screen size and below using vanilla javascript.
+Navigation slide in from right on tablet and below.
+Get sub menu navigation links via api using vanilla javascript.
 by The Utopian Fool
 
 ------------------------------------------------------
